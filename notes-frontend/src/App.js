@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 const notesClient = axios.create({
@@ -32,7 +31,7 @@ class App extends Component {
           { this.state.notes.map(note => 
             <li key={note.id}>{note.title}</li>)}
         </ul>
-        { this.state.error ? <h2> { this.state.error }</h2> : ''}
+        { this.state.error ? <h2> { this.state.error } </h2> : ''}
       </div>
     )
   }
